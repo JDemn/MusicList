@@ -14,7 +14,7 @@ require('./database');
 //code of server divide on diverses sections
 
 //setting
-app.set('port',process.env.PORT||3002); // creando configuración del puerto //proces-PORT dice que si hay un puerto en la nuve disponible, lo use
+app.set('port',process.env.PORT||3000); // creando configuración del puerto //proces-PORT dice que si hay un puerto en la nuve disponible, lo use
 app.set('views',path.join(__dirname,'views')); //decirle donde están las vistas a través de path  .join une directorios // dirname es una constante de node que devuelve la ruta en donde se está ejecutando el actual archivo
 // en este caso index.js y lo concatena con otro, que en este caso queremos que sea views 
    

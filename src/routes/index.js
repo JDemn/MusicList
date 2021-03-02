@@ -2,14 +2,15 @@
 // requiriendo express para crear rutas
 const express = require('express'); 
 const router = express.Router();//.Router() permite tener un objeto para facilitar la creación de rutas
+
 /*creando ruta*/
 router.get('/',(req, res)=>{
-    res.send('Index'); //luego se reemplaza por un archivo
+    res.render('index'); //sen envía, render es para pasarla la dirección del archivo que queremos mostrar en la página
 });
 
 //create a new route
 router.get('/about',(req,res)=>{
-    res.send("About");
+    res.render("about.hbs"); // debería ser about.hbs, archivo que está en las vistas, pero como ya está configurado para trabajar con handlebars, entonces se omite el .hbs
 });
 // se necesita exportar método router
 module.exports=router;

@@ -1,0 +1,28 @@
+<!-- formulario para crear una nueva playlist se usa em routes/musicList-->
+
+<!--recibiendo los datos del error con handlebars-->
+{{#each errors}} <!-- each recorre cada error, por lo que se puede mostrar un cuadro de error por cada uno que exista-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}} <!--propiedad que tiene el error, en las rutas-->
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/each}}
+
+<div class="col-md-4 mx-auto"> <!-- poner en columnas los forms-->
+<div class="card">
+    <div class="card-header"><h3>Create a new play list</h3></div>
+    <div class="card-body">
+        <form action="/musicList/newpList" method="POST"> <!-- dirección destino de los datos -->
+            <div class="form-group mt-3"> <!-- separar los inpiuts-->
+                <input type="text" name="title" class="form-control" placeholder="tititulo de la playlist" autofocus>
+            </div>
+            <div class="form-group mt-3">
+                <textarea name="descripcion" class="form-control" placeholder="breve descripción de la playList"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <button class="btn btn-primary btn-lg btn-block" type="submit"> Guardar</button>
+            </div>
+        </form> <!-- este formulario manda un petición al sevidor-->
+    </div>
+</div>
+</div>

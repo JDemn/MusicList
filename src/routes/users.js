@@ -6,11 +6,11 @@ const router = express.Router(); //.Router() permite tener un objeto para facili
 
 // rutas para que se autentique el usuario
 router.get('/users/signin',(req,res)=>{
-  res.send('Ingresando a la aplicación');  
+  res.render('users/signin');//archivo que esta en vistas en users  
 });
 
 router.get('/users/signup',(req,res)=>{
-    res.send('formulario de autenticación');
+    res.render('users/signup');
 });
 // se necesita exportar método router
 module.exports=router;
